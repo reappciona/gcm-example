@@ -275,7 +275,7 @@ class Gcm extends Database {
 		return parent::insert($this->_log_table, array(
 			'request_time'	=> $_SERVER['REQUEST_TIME'],
 			'query'			=> cv($data['query']) ? $data['query'] : null,
-			'uuid'			=> cv($data['uuid']) ? $data['uuid'] : 'airplug',
+			'uuid'			=> cv($data['uuid']) ? $data['uuid'] : 'api test tool',
 			'request'		=> $_SERVER['REQUEST_METHOD'].' Body: '.json_encode($_POST).' '.$_SERVER['SERVER_PROTOCOL'],
 			'user_agent'	=> $_SERVER['HTTP_USER_AGENT'],
 			'remote_addr'	=> $_SERVER['REMOTE_ADDR'],
@@ -293,7 +293,7 @@ class Gcm extends Database {
 			return false;
 		}
 
-		$subject = "=?EUC-KR?B?".base64_encode(iconv('UTF-8','EUC-KR',$GLOBALS['project'].' api 로그 저장에 실패했습니다.')).'?=\n';
+		$subject = "=?EUC-KR?B?".base64_encode(iconv('UTF-8','EUC-KR',$GLOBALS['project'].' api - log writing failed')).'?=\n';
 		$request = $_SERVER['REQUEST_METHOD'].' Body: '.json_encode($_POST).' '.$_SERVER['SERVER_PROTOCOL'];
 		$message =<<<EOT
 <pre>\n

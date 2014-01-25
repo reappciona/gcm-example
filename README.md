@@ -45,7 +45,7 @@ For quick testing or to get the idea hwo it works,
 - Once you are successfully launched the client, press 'register' button to register your `registration_id` to the server.
 - And then press 'send' button to populate the server's landing page. There, you can send a gcm message to yourself.
 
-[![gcm-example_api_test_tool.png](http://promote.airplug.com/gcm-example/res/img/gcm-example_api_test_tool.png)]
+![gcm-example_api_test_tool.png](http://promote.airplug.com/gcm-example/res/img/gcm-example_api_test_tool.png)
 
 ###License
 
