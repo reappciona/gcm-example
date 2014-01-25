@@ -1,0 +1,22 @@
+{
+	"name": "appkr/gcm-example",
+	"description": "reference implementation for Googld Cloud Messaging - 3rd application server in php and Android client in java",
+	"keywords": ["gcm", "push message", "Android"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "appkr",
+			"homepage": "https://github.com/appkr/gcm-example/contributors"
+		}
+	],
+	"require": {
+			"twitter/bootstrap": ">=3.0"
+	},
+	"config": {
+			"preferred-install": "dist"
+	}
+}
+//bootstrap is already in the source tree under /res.
+//For maintenance purpose, if you still want to use composer,
+//change the code corresponding to 'vendor' directories. 
+//Tt's your choice to take a risk.
