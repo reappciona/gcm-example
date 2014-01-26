@@ -27,11 +27,6 @@ try{
 
 	switch ($query) {
 		case 'register' :
-			if (stristr($_SERVER['HTTP_USER_AGENT'], 'gcm_example') === false) {
-				//remove this lines at distribution version
-				throw new Exception ($strings[506], 506);
-			}
-
 			if (!cv($gcmID) || !cv($uuid)) {
 				throw new Exception ($strings[505], 505);
 			}
@@ -39,11 +34,6 @@ try{
 			break;
 
 		case 'unregister' :
-			if (stristr($_SERVER['HTTP_USER_AGENT'], 'gcm_example') === false) {
-				//remove this lines at distribution version
-				throw new Exception ($strings[506], 506);
-			}
-
 			if (!cv($gcmID) || !cv($uuid)) {
 				throw new Exception ($strings[505], 505);
 			}
