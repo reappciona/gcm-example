@@ -18,10 +18,16 @@ $db = new Database($db_config);
 //this api test tool makes xhr request to itself with 'app=xhr' query.
 //on receiving the xhr request this tool page response json format statistics data
 if ($app == 'xhr') {
-	$query = "SELECT package, count(package) AS cnt
-		FROM {$table}
-		WHERE gcmID IS NOT NULL
-		GROUP BY package";
+	$query = (cv($uuid) && cv($only))
+		? "SELECT package, count(package) AS cnt
+			FROM {$table}
+			WHERE uuid = {$uuid}
+				AND gcmID IS NOT NULL"
+		: "SELECT package, count(package) AS cnt
+			FROM {$table}
+			WHERE gcmID IS NOT NULL
+			GROUP BY package";
+
 	$receiver_count = $db->queryTable($query);
 
 	if ($receiver_count) {
@@ -73,7 +79,7 @@ $content =<<<EOT
 			<div class="page-header">
 				<h3>{$doc_title}</h3>
 				<p class="text-muted">
-					Reference implementation of Google Cloud Messaging - 3rd application server in php and Android client in java.<br/>
+					{$description}<br/>
 					With this api test tool, you can send gcm message to a selected group of gcm clients. For 'register' or 'unregister' api call test, use the Android apk files that is bundled with this project. Check <a href="./apidoc.php">the api doc</a> for available apis. <strong class="text-danger">Do not try to abuse this api test tool.</strong>
 				</p>
 			</div>
@@ -84,7 +90,7 @@ $content =<<<EOT
 				<input name="query" type="hidden" value="send"/>
 
 				<div class="form-group" id="languageHolder">
-					<label for="language" class="col-sm-2 control-label"> language</span></label>
+					<label for="language" class="col-sm-2 control-label"> response language</span></label>
 					<div class="col-sm-2">
 						<select name="l" id="language" class="form-control">
 							{$options_of_languages}
@@ -140,7 +146,7 @@ $content =<<<EOT
 					<label for="package" class="col-sm-2 control-label"> dryrun</span></label>
 					<div class="checkbox col-sm-10">
 						<label>
-							<input type="checkbox" name="dry-run" id="dryrun""/>
+							<input type="checkbox" name="dryrun" id="dryrun""/>
 							<span class="help-block">If checked, send gcm and get response from google server,
 							but clients do not receive gcm message actually. That is to say, it's a simulation mode.</span>
 						</label>

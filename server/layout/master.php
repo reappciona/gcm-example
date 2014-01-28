@@ -12,7 +12,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="reference implementation of Google Cloud Messaging - 3rd application server in php and Android client in java" />
+		<meta name="description" content="<?php echo $description;?>" />
 		<meta name="author" content="juwonkim@me.com" />
 
 		<title><?php echo $doc_title;?></title>

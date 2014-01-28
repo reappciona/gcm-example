@@ -18,5 +18,5 @@
 }
 //bootstrap is already in the source tree under /res.
 //For maintenance purpose, if you still want to use composer,
-//change the code corresponding to 'vendor' directories. 
-//Tt's your choice to take a risk.
+//change the path in the code corresponding to 'vendor' directories. 
+//It's your choice to take the risk.

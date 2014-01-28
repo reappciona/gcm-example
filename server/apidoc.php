@@ -14,7 +14,7 @@ $content =<<<EOT
 		<div class="container">
 			<div class="page-header">
 				<h3>{$doc_title}</h3>
-				<p class="text-muted">Reference implementation of Google Cloud Messaging - 3rd application server in php and Android client in java.</p>
+				<p class="text-muted">{$description}</p>
 			</div>
 
 			<h4 class="text-info">Overview</h4>

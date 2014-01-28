@@ -76,4 +76,7 @@ if ($production) {
 	error_reporting(0);
 	ini_set('display_errors', 0);
 }
+
+//project description
+$description = 'Reference implementation of Google Cloud Messaging - 3rd party application server in php and Android client app in java.';
 ?>
