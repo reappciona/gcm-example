@@ -41,9 +41,11 @@ It is a out-of-the-box reference code. What is means is that you just copy code 
 
 For quick testing or to get the idea hwo it works,
 
-- Download [gcm_example_client binary](http://promote.airplug.com/gcm-example/res/bin/gcm_example_client.apk) and install it on your Android device. The easist way of installing is to open this page at an Android device and click the link. If it is not applicable, you can email the client binary as an attachment and open it at an Android device. Or if you have Android SDK on your machine and an Androdid device connected with a usb cable, issue a command `your_sdk_path/platform-tools/adb install gcm_example_client.apk` at console. **Since the client binary is not a package from play store, you must set 'Unknown Sources' to ON at the Security section of the System preferences.
+- Download [gcm_example_client binary](http://promote.airplug.com/gcm-example/res/bin/gcm_example_client.apk) and install it on your Android device. The easist way of installing is to open this page at an Android device and click the link. If it is not applicable, you can email the client binary as an attachment and open it at an Android device. Or if you have Android SDK on your machine and an Androdid device connected with a usb cable, issue a command `your_sdk_path/platform-tools/adb install gcm_example_client.apk` at console. **Since the client binary is not a package from play store, you must set 'Unknown Sources' to ON at the Security section of the System preferences.**
 - Once you are successfully launched the client, press 'register' button to register your `registration_id` to the server.
 - And then press 'send' button to populate the server's landing page. There, you can send a gcm message to yourself.
+- You can build the provided client code with an arbitrarily-set Android client's package name and test it working against this server, but please do not abuse it.
+- Or, you can set a server first and then test it working with the given [gcm_example_client binary](http://promote.airplug.com/gcm-example/res/bin/gcm_example_client.apk). You can put your server's api end-point there.
 
 ![gcm-example_api_test_tool.png](http://promote.airplug.com/gcm-example/res/img/gcm-example_api_test_tool.png)
 
