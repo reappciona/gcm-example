@@ -45,7 +45,7 @@ For quick testing or to get the idea hwo it works,
 - Once you successfully launched the client, press 'Get registration_id' button to get unique id from the Google Connection Server. And then, press `Register` button to save the unique id you've just got. 
 - To test it working, press 'Send' button to populate the server's landing page. There, you can send a gcm message to yourself.
 
-![gcm-example_client.png](http://promote.airplug.com/gcm-example/res/img/gcm-example_client.png =220x)
+![gcm-example_client.png](http://promote.airplug.com/gcm-example/res/img/gcm-example_client.png)
 
 - You can build the provided client code with an arbitrarily-set package name(e.g. com.abc.def, kr.appkr.push...), and test it working against this server, but please do not abuse it.
 - Or, you can set a server first and then test it working with the given [gcm_example_client binary](http://promote.airplug.com/gcm-example/res/bin/gcm_example_client.apk). You can manually put YOUR SERVER's api end-point there.
