@@ -1,2 +1,2 @@
-##version 0.0.1-alpha
-- still work-in-progress
+##version 1.0.0
+- first official release
